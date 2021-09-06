@@ -1,0 +1,56 @@
+import clientes.*
+import remiseras.*
+import oficina.*
+
+test "testClientes"
+{
+	//escenario
+	ludmila.precioPactadoPorKm()
+	anaMaria.precioPactadoPorKm()
+	teresa.precioPactadoPorKm()
+
+	//verificaciones
+	assert.equals(36, roxana.precioViaje(ludmila,2))
+	assert.equals(60, roxana.precioViaje(anaMaria,2))
+	assert.equals(44, roxana.precioViaje(teresa,2))
+	assert.equals(43.20, gabriela.precioViaje(ludmila,2))
+	assert.equals(72, gabriela.precioViaje(anaMaria,2))
+	assert.equals(52.80, gabriela.precioViaje(teresa,2))	
+	assert.equals(50, mariela.precioViaje(ludmila,2))
+	assert.equals(60, mariela.precioViaje(anaMaria,2))
+	assert.equals(50, mariela.precioViaje(teresa,2))	
+	assert.equals(100, juana.precioViaje(ludmila,2))
+	assert.equals(100, juana.precioViaje(anaMaria,2))
+	assert.equals(100, juana.precioViaje(teresa,2))			
+	//assert.that(true)
+
+}
+
+test "testLuciaylacadete"
+{
+	//escenario
+	lucia.reemplazo(mariela)
+	melina.reemplazo(ludmila)
+
+	//verificaciones
+	assert.equals(150, lucia.precioViaje(melina, 10))
+	assert.equals(50, lucia.precioViaje(melina, 1))
+	
+	lucia.reemplazo(gabriela)
+	
+	assert.equals(180, lucia.precioViaje(melina, 10))
+	assert.equals(18, lucia.precioViaje(melina, 1))
+
+}
+
+test "testOficina"
+{
+	//escenario
+	oficina.asignarRemiseras(roxana, juana)
+	
+	//verificaciones
+	assert.equals(juana, oficina.remiseraElegidaParaViaje(anaMaria, 10))
+	assert.equals(roxana, oficina.remiseraElegidaParaViaje(teresa, 10))
+	assert.equals(roxana, oficina.remiseraElegidaParaViaje(teresa, 4))
+
+}

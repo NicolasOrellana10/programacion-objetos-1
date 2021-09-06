@@ -34,7 +34,7 @@ P.ej. `roxana.precioViaje(ludmila,10)` debe devolver 180.
 
 <br>
 
-## Lucía y la cadete
+## Lucía y la cadete2272
 
 Agregar al modelo a la remisera Lucía, y a la cliente Melina.
 - **Lucía** es una remisera que hace reemplazos, o sea, cubre los turnos que las otras remiseras se tienen que tomar por alguna razón.

@@ -17,18 +17,58 @@ object roxana {
 
 object gabriela {
 	method precioViaje(cliente, kms) { 
-		return cliente.precioPactadoPorKm() * kms
+		return cliente.precioPactadoPorKm() * kms * 1.2
 	}
 }
 
 object mariela {
-	method precioViaje(cliente, kms) { 
-		return cliente.precioPactadoPorKm() * kms
+	method precioViaje(cliente, kms) 
+	{ 
+		const valor = cliente.precioPactadoPorKm() * kms
+		
+		if(valor > 50)
+		{
+			return valor
+		}
+		else
+		{
+			return 50
+		}
 	}
 }
 
 object juana {
-	method precioViaje(cliente, kms) { 
-		return cliente.precioPactadoPorKm() * kms
+	method precioViaje(cliente, kms)
+	{ 
+		if(kms > 8)
+		{
+			return 200
+		}
+		else
+		{
+			return 100
+		}
+	}
+}
+
+/*
+ * - **Lucía** es una remisera que hace reemplazos, o sea, cubre los turnos que las otras remiseras se tienen que tomar por alguna razón.
+Hay que informar a quién está reeemplazando Lucía.
+Lucía cobra lo mismo que la remisera a la que está reemplazando.
+ * 
+ */
+ 
+object lucia
+{
+	var chofer
+	method reemplazo(remisera)
+	{
+		chofer = remisera
+		return chofer
+	}
+	
+	method precioViaje(cliente, kms)
+	{ 
+		return chofer.precioViaje(cliente, kms)
 	}
 }
