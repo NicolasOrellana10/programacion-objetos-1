@@ -1,0 +1,20 @@
+import clientes.*
+import remiseras.*
+import oficina.*
+
+test "testLuciaylacadete"
+{
+	//escenario
+	lucia.reemplazo(mariela)
+	melina.reemplazo(ludmila)
+
+	//verificaciones
+	assert.equals(150, lucia.precioViaje(melina, 10))
+	assert.equals(50, lucia.precioViaje(melina, 1))
+	
+	lucia.reemplazo(gabriela)
+	
+	assert.equals(180, lucia.precioViaje(melina, 10))
+	assert.equals(18, lucia.precioViaje(melina, 1))
+
+}

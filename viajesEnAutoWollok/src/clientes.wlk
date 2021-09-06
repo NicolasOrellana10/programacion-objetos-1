@@ -1,4 +1,5 @@
 import remiseras.*
+import oficina.*
 
 /*
 La cooperativa de remiseros de Doctor Olaechea nos pide que le armemos un programa para manejar cuánto cobrar los viajes.
@@ -36,9 +37,9 @@ object anaMaria {
 }
 
 object teresa {
-	/* costoPorKmVariable(valor) ingresar precio variable por km */
+	/* precio pactado 22*/
 	var precio = 22
-
+	/* costoPorKmVariable(valor) ingresar precio variable por km */
 	method costoPorKmVariable(valor){
 		precio = valor
 		return precio

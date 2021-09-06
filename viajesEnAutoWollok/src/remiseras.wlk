@@ -1,4 +1,5 @@
 import clientes.*
+import oficina.*
 
 /*
  A partir de estos valores, cada remisera tiene un margen de decisión sobre cuánto cobrar un viaje. En particular:

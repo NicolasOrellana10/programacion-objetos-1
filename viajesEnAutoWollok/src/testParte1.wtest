@@ -1,0 +1,50 @@
+import clientes.*
+import remiseras.*
+import oficina.*
+
+test "testClientes"
+{
+	//escenario
+	ludmila.precioPactadoPorKm()
+	
+	anaMaria.economicamenteEstable(1)
+	anaMaria.precioPactadoPorKm()
+
+	teresa.costoPorKmVariable(22)
+	teresa.precioPactadoPorKm()
+
+	//verificaciones para 2 km
+	assert.equals(36, roxana.precioViaje(ludmila,2))
+	assert.equals(60, roxana.precioViaje(anaMaria,2))
+	assert.equals(44, roxana.precioViaje(teresa,2))
+	
+	assert.equals(43.20, gabriela.precioViaje(ludmila,2))
+	assert.equals(72, gabriela.precioViaje(anaMaria,2))
+	assert.equals(52.80, gabriela.precioViaje(teresa,2))	
+	
+	assert.equals(50, mariela.precioViaje(ludmila,2))
+	assert.equals(60, mariela.precioViaje(anaMaria,2))
+	assert.equals(50, mariela.precioViaje(teresa,2))	
+	
+	assert.equals(100, juana.precioViaje(ludmila,2))
+	assert.equals(100, juana.precioViaje(anaMaria,2))
+	assert.equals(100, juana.precioViaje(teresa,2))			
+
+
+	//verificaciones para 10 km
+	assert.equals(180, roxana.precioViaje(ludmila,10))
+	assert.equals(300, roxana.precioViaje(anaMaria,10))
+	assert.equals(220, roxana.precioViaje(teresa,10))
+	
+	assert.equals(216, gabriela.precioViaje(ludmila,10))
+	assert.equals(360, gabriela.precioViaje(anaMaria,10))
+	assert.equals(264, gabriela.precioViaje(teresa,10))	
+	
+	assert.equals(180, mariela.precioViaje(ludmila,10))
+	assert.equals(300, mariela.precioViaje(anaMaria,10))
+	assert.equals(220, mariela.precioViaje(teresa,10))	
+	
+	assert.equals(200, juana.precioViaje(ludmila,10))
+	assert.equals(200, juana.precioViaje(anaMaria,10))
+	assert.equals(200, juana.precioViaje(teresa,10))			
+}

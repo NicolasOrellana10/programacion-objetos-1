@@ -52,17 +52,17 @@ object oficina
 		if(precio1 > precio2)
 		{
 			diferencia = precio1 - precio2
-			self.diferencia(diferencia)
+			return(self.remiseraElegida(diferencia))
 		}
 		else
 		{
 			diferencia = precio2 - precio1
-			self.diferencia(diferencia)
+			return(self.remiseraElegida(diferencia))
 		}
 	}
-	method diferencia(valor)
+	method remiseraElegida(valor)
 	{
-		if(valor > 30)
+		if(valor >= 30)
 		{
 			return opcion2
 		}
